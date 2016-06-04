@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+<bean name="Item" class="it.salestaxes.items.Item" abstract="true"></bean>
+	
+	<bean name="bookItem" parent="Item" 
+		class="it.salestaxes.items.BookItem" scope="prototype"></bean>
+	<bean name="foodItem" parent="Item" 
+		class="it.salestaxes.items.FoodItem" scope="prototype"></bean>
+	<bean name="medicalItem" parent="Item" 
+		class="it.salestaxes.items.MedicalItem" scope="prototype"></bean>
+	<bean name="miscellaneousItem" parent="Item" 
+		class="it.salestaxes.items.MiscellaneousItem" scope="prototype"></bean>
+	<bean name="shoppingCart"
+		class="it.salestaxes.shop.ShoppingCart" scope="prototype"></bean>
+	<bean name="shop"
+		class="it.salestaxes.shop.Shop" scope="prototype" ></bean>
+</beans>
