@@ -20,7 +20,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring-context-tst.xml")
 //@FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class MainTest {
+public class SalesTest {
 
 	@Autowired
 	private BookItem book;
