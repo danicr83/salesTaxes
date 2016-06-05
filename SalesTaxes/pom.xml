@@ -12,6 +12,7 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
+			<scope>test</scope>
 		</dependency>
 		<!-- http://mvnrepository.com/artifact/org.springframework/spring-context -->
 		<dependency>
@@ -37,24 +38,6 @@
 					<source>1.7</source>
 					<target>1.7</target>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-invoker-plugin</artifactId>
-				<version>2.0.0</version>
-				<configuration>
-					<debug>true</debug>
-					<cloneProjectsTo>${project.build.directory}/it</cloneProjectsTo>
-					<projectsDirectory>C:/MVN/projects</projectsDirectory>
-				</configuration>
-				<executions>
-					<execution>
-						<id>integration-test</id>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
