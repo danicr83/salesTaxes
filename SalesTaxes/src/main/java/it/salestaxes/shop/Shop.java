@@ -16,13 +16,6 @@ public class Shop {
 	private BigDecimal total;
 	private BigDecimal totalTaxes;
 	
-	/*
-	 * this containes the businessLogic of counting taxes and fees
-	 * 
-	 * methods
-	 * 	checkout (ShoppingCart)
-	 * 
-	 */
 	public Shop (){
 		total = new BigDecimal(0.0);
 		totalTaxes = new BigDecimal(0.0);

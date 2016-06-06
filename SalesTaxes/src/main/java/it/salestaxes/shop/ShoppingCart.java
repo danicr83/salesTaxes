@@ -6,21 +6,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map.Entry;
 
 import org.springframework.stereotype.Component;
 
 @Component
 public class ShoppingCart {
 
-	/*
-	 * collect all product  to keep trace of the type by quantity
-	 * properties
-	 * 	List<Item>
-	 * method
-	 * 	addItem
-	 * 
-	 */
+	
 	private List<Item> cart;
 
 	public ShoppingCart(){

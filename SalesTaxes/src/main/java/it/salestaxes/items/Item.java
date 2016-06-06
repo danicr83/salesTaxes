@@ -8,17 +8,13 @@ public abstract class Item {
 	private boolean imported;
 	private BigDecimal netPrice;
 	private BigDecimal grossPrice;
-//	private int basicTaxPercent;
 	
 	public Item()
 	{
 		this.name = "";
-//		this.quantity = 1;
 		this.imported = false;
 		this.netPrice = new BigDecimal("0.0");
 		this.grossPrice = new BigDecimal("0.0");
-//		this.basicTaxPercent = 10;
-//		this.dutyTaxPercent = 0;
 	}
 	
 	public Item(String name, int quantity, boolean imported, BigDecimal netPrice)
@@ -32,10 +28,6 @@ public abstract class Item {
 		this.netPrice = netPrice;
 		this.imported = imported;
 		this.grossPrice = netPrice;
-//		this.quantity = quantity;
-//		if (imported) {
-//			this.dutyTaxPercent=5;
-//		}
 	}
 	
 	public abstract BigDecimal getBasicTaxPercent();
@@ -52,17 +44,6 @@ public abstract class Item {
 	public void setNetPrice(BigDecimal netPrice) {
 		this.netPrice = netPrice;
 	}
-//	public int getQuantity() {
-//		return quantity;
-//	}
-//	public void setQuantity(int quantity) {
-//		this.quantity = quantity;
-//	}
-//
-//	public int getBasicTaxPercent() {
-//		return basicTaxPercent;
-//	}
-//
 
 	public void setImported(boolean imported) {
 		this.imported = imported;

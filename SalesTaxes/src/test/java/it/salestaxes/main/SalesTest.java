@@ -19,7 +19,6 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:spring-context-tst.xml")
-//@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SalesTest {
 
 	@Autowired
@@ -36,15 +35,6 @@ public class SalesTest {
 	private ShoppingCart shoppingCart;
 	@Autowired
 	private Shop shop;
-
-	//	public static void main(String[] args) {
-	//
-	//		Result result = JUnitCore.runClasses(MainTest.class);
-	//	      for (Failure failure : result.getFailures()) {
-	//	         System.out.println("FAILED: "failure.toString());
-	//	      }
-	//	      System.out.println(result.wasSuccessful());
-	//	}
 
 	@Test
 	public void checkItemQuantity(){
@@ -74,11 +64,6 @@ public class SalesTest {
 	public void MedicalProductsAreExemptFromBasictaxes(){
 		Assert.assertEquals(new BigDecimal("0.0"), book.getBasicTaxPercent());
 	}
-	//	@Test
-	//	public void importedGenericItemsAreSubjectedToFee (){
-	//		miscellaneousItem.setImported(true);
-	//		Assert.assertTrue(miscellaneousItem.getDutyTaxPercent()>0);
-	//	}
 
 	@Test
 	public void taxesAreRoundedUp(){
